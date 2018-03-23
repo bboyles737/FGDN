@@ -11,11 +11,7 @@
 
 #include <cmath>
 
-const double PI = 3.14159265358979323846;
-
-
-
-// Can put predefined colors here to save typing
+// Predefined colors
 const glm::vec4 BLACK = glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
 const glm::vec4 GRAY = glm::vec4(0.5f, 0.5f, 0.5f, 1.0f);
 const glm::vec4 WHITE = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
@@ -33,14 +29,8 @@ void drawGrids(int gridVAO, int numVerts, glm::vec4 color, glm::vec3 offset, Sha
 /** Returns a VAO for a rectangle with given upper left hand coordinates and size */
 int rectangle(float ulX, float ulY, float sizeX, float sizeY, GLenum usage = GL_STATIC_DRAW);
 int rectangleTex(float ulX, float ulY, float sizeX, float sizeY, GLenum usage = GL_STATIC_DRAW);
-int rectangleTex2(float ulX, float ulY, float sizeX, float sizeY, GLenum usage = GL_STATIC_DRAW);
 
-/** Returns a VAO for a circle with given specifications and number of vertexes */
-int circle(float centX, float centY, float rad, int numVert, GLenum usage = GL_STATIC_DRAW);
-int circleTex(float centX, float centY, float rad, int numVert, GLenum usage = GL_STATIC_DRAW);
 
-/** Returns the parameter normalized to [0-360.0] */
-float normDegrees(float degrees);
 float capAmount(float amt, float minVal, float maxVal);
 
 /** Returns vec3 capped to [0.0-1.0] in x/y/z */

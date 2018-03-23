@@ -17,9 +17,11 @@
 #include "oGL_Tools.h"
 #include "Font.h"
 
+#include "Unit/Unit.h"
+#include "Unit/Ship.h"
+
 // Function prototypes
 void processInput(GLFWwindow* window);
-GLFWwindow* setupOpenGL(int width, int height, std::string name);
 
 // Global variables
 Font arialBlk = Font("fonts/ArialBlackLarge.bmp", "fonts/ArialBlack.csv");
@@ -44,6 +46,10 @@ int main() {
 
     // Initialize objects and classes
     stdProgram.initialize();
+
+    Ship y = Ship();
+    std::cout << y.getHeading() << "\n";
+    y.draw(stdProgram);
 
     // Main loop
     while (!glfwWindowShouldClose(window)) {

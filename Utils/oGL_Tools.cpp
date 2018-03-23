@@ -84,67 +84,6 @@ int rectangleTex(float ulX, float ulY, float sizeX, float sizeY, GLenum usage) {
     return setupVAOTex(vertices, sizeof(vertices), usage);
 }
 
-int rectangleTex2(float ulX, float ulY, float sizeX, float sizeY, GLenum usage) {
-    float vertices[] = {
-        ulX,            ulY,            0.0f,   0.0f, 1.0/5.5,
-        ulX + sizeX,    ulY,            0.0f,   1.0f, 1.0/5.5,
-        ulX + sizeX,    ulY - sizeY,    0.0f,   1.0f, 0.0f,
-        ulX,            ulY - sizeY,    0.0f,   0.0f, 0.0f
-    };
-
-    return setupVAOTex(vertices, sizeof(vertices), usage);
-}
-
-/** Creates a circle around the provided center point with the
-  * specified radius and number of vertexes along the perimeter of the
-  * circle.  To draw, use GL_TRIANGLE_FAN, and remember to draw
-  * numVert + 2 (one for the center point and one to close the triangle
-  * fan)
-  */
-int circle(float centX, float centY, float rad, int numVert, GLenum usage) {
-    float vertices[(numVert + 2)*3] = {0.0f};
-
-    vertices[0] = centX;
-    vertices[1] = centY;
-    for (int i = 0; i <= numVert; i++) {
-        int vIndx = (i+1)*3;
-        float circleX = cos(2*PI * i / numVert);
-        float circleY = sin(2*PI * i / numVert);
-        vertices[vIndx] = circleX * rad + centX;
-        vertices[vIndx + 1] = circleY * rad + centY;
-    }
-
-    return setupVAO(vertices, sizeof(vertices), usage);
-}
-
-int circleTex(float centX, float centY, float rad, int numVert, GLenum usage) {
-    float vertices[(numVert + 2)*5] = {0.0f};
-
-    vertices[0] = centX;
-    vertices[1] = centY;
-    vertices[3] = 0.5;
-    vertices[4] = 0.5;
-
-    for (int i = 0; i <= numVert; i++) {
-        int vIndx = (i+1)*3;
-        float circleX = cos(2*PI * i / numVert);
-        float circleY = sin(2*PI * i / numVert);
-        vertices[vIndx] = circleX * rad + centX;
-        vertices[vIndx + 1] = circleY * rad + centY;
-        vertices[vIndx + 3] = circleX;
-        vertices[vIndx + 4] = circleY;
-        std::cout << "(" << vertices[vIndx] << ", " << vertices[vIndx + 1] << ", " << vertices[vIndx + 2] << ", " << vertices[vIndx + 3] << ", " << vertices[vIndx + 4] << ")\n";
-    }
-
-    return setupVAOTex(vertices, sizeof(vertices), usage);
-}
-
-/** Given a float of degrees, returns the answer bounded to [0, 360.0] */
-float normDegrees(float degrees) {
-    while (degrees < 0.0) degrees += 360.0;
-    while (degrees > 360.0) degrees -= 360.0;
-    return degrees;
-}
 
 float capAmount(float amt, float minVal, float maxVal) {
     if (amt < minVal) return minVal;

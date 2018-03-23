@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add directory="include" />
+					<Add directory="Unit" />
+					<Add directory="Utils" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add directory="include" />
+					<Add directory="Unit" />
+					<Add directory="Utils" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -39,13 +43,19 @@
 		<Unit filename="Font.h" />
 		<Unit filename="Shader.cpp" />
 		<Unit filename="Shader.h" />
+		<Unit filename="Unit/Ship.cpp" />
+		<Unit filename="Unit/Ship.h" />
+		<Unit filename="Unit/Unit.cpp" />
+		<Unit filename="Unit/Unit.h" />
+		<Unit filename="Utils/FGDN_Tools.cpp" />
+		<Unit filename="Utils/FGDN_Tools.h" />
+		<Unit filename="Utils/oGL_Tools.cpp" />
+		<Unit filename="Utils/oGL_Tools.h" />
 		<Unit filename="fShader.glsl" />
 		<Unit filename="glad.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="main.cpp" />
-		<Unit filename="oGL_Tools.cpp" />
-		<Unit filename="oGL_Tools.h" />
 		<Unit filename="vShader.glsl" />
 		<Extensions>
 			<code_completion />
