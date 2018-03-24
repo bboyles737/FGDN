@@ -50,5 +50,9 @@ void Unit::setSpeed(double newSpeed) {
     setVelocity(velo);
 }
 
-double Unit::getHeading() { return this->heading; }
-glm::dvec3 Unit::getPos() { return this->pos; }
+double Unit::getHeading()   { return this->heading; }
+double Unit::getPitch()     { return this->pitch; }
+double Unit::getSpeed()     { return this->speed; }
+double Unit::getTgtSpeed()  { return this->tgtSpeed; }
+glm::dvec3 Unit::getVelo()  {return this->velocity; }
+glm::dvec3 Unit::getPos()   { return this->pos; }

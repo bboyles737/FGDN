@@ -27,3 +27,4 @@ void Ship::setClass(std::string newName) {
 
 std::string Ship::getName() { return this->name; }
 std::string Ship::getClass() { return this->className; }
+char Ship::getSizeClass() { return this->sizeClass; }

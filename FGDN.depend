@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1521852601 source:d:\coding\codeblocks\fgdn\glad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<glad/glad.h>
+	<windows.h>
+	<dlfcn.h>
+
+1521852601 source:d:\coding\codeblocks\fgdn\shader.cpp
+	"Shader.h"
+
+1521852601 d:\coding\codeblocks\fgdn\shader.h
+	<glm/glm.hpp>
+	<glm/gtc/type_ptr.hpp>
+	<glad/glad.h>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+
+1521853214 source:d:\coding\codeblocks\fgdn\unit\ship.cpp
+	"Ship.h"
+	"../Shader.h"
+	<iostream>
+
+1521853756 d:\coding\codeblocks\fgdn\unit\ship.h
+	"Unit.h"
+	"ShipRecord.h"
+	<string>
+
+1521853691 d:\coding\codeblocks\fgdn\unit\unit.h
+	<glm/glm.hpp>
+	"../Shader.h"
+
+1521853688 source:d:\coding\codeblocks\fgdn\unit\unit.cpp
+	"Unit.h"
+	"../Utils/FGDN_Tools.h"
+	<cmath>
+	<iostream>
+
+1521852601 d:\coding\codeblocks\fgdn\utils\fgdn_tools.h
+
+1521852601 source:d:\coding\codeblocks\fgdn\utils\fgdn_tools.cpp
+	"FGDN_Tools.h"
+
+1521852601 source:d:\coding\codeblocks\fgdn\font.cpp
+	"Font.h"
+	"oGL_Tools.h"
+	<iostream>
+	<glm/gtc/matrix_transform.hpp>
+	<stdlib.h>
+
+1521852601 d:\coding\codeblocks\fgdn\font.h
+	"Shader.h"
+	<string>
+	<glm/glm.hpp>
+
+1521852658 d:\coding\codeblocks\fgdn\utils\ogl_tools.h
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	"../Shader.h"
+	<cmath>
+
+1521852601 source:d:\coding\codeblocks\fgdn\main.cpp
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	<stb_image.h>
+	<iostream>
+	<string>
+	<vector>
+	"Shader.h"
+	"oGL_Tools.h"
+	"Font.h"
+	"Unit/Unit.h"
+	"Unit/Ship.h"
+
+1521853877 d:\coding\codeblocks\fgdn\unit\shiprecord.h
+	<string>
+	<vector>
+
+1521852601 source:d:\coding\codeblocks\fgdn\utils\ogl_tools.cpp
+	"oGL_Tools.h"
+	<stb_image.h>
+	<stdio.h>
+	<iostream>
+

@@ -2,6 +2,7 @@
 #define SHIP_H
 
 #include "Unit.h"
+#include "ShipRecord.h"
 
 #include <string>
 
@@ -10,6 +11,7 @@ class Ship : public Unit
     public:
         Ship();
         virtual void initialize();
+        void loadRecord(ShipRecord r);
 
         virtual void draw(Shader s);
 
@@ -19,10 +21,12 @@ class Ship : public Unit
 
         std::string getName();
         std::string getClass();
+        char getSizeClass();
 
     private:
         std::string name = "";
         std::string className = "";
+        char sizeClass = 'E';
 
 
 };

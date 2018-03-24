@@ -31,6 +31,10 @@ class Unit
         void changeSpeedBy(double delta);
 
         double getHeading();
+        double getPitch();
+        double getSpeed();
+        double getTgtSpeed();
+        glm::dvec3 getVelo();
         glm::dvec3 getPos();
 
 
@@ -42,6 +46,7 @@ class Unit
 
         glm::dvec3 velocity = glm::dvec3(0.0, 0.0, 0.0); // m/s
         double speed = 0.0;                              // m/s
+        double tgtSpeed = 0.0;                           // m/s
 
     private:
 };
