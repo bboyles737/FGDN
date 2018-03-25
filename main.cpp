@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 
 #include "Shader.h"
 #include "oGL_Tools.h"
@@ -19,6 +20,8 @@
 
 #include "Unit/Unit.h"
 #include "Unit/Ship.h"
+#include "Unit/ShipRecord.h"
+#include "Unit/DB_Loader.h"
 
 // Function prototypes
 void processInput(GLFWwindow* window);
@@ -50,6 +53,12 @@ int main() {
     Ship y = Ship();
     std::cout << y.getHeading() << "\n";
     y.draw(stdProgram);
+
+    std::map<int, ShipRecord> x = loadShipDB("Unit/ShipDB.csv");
+
+    std::cout << "THIS SHIP IS DA BOMB: " << x[1].printSummary() << "\n";
+    std::cout << "Number of records: " << x.size() << "\n";
+
 
     // Main loop
     while (!glfwWindowShouldClose(window)) {

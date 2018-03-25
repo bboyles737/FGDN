@@ -9,18 +9,26 @@ class ShipRecord
     public:
         ShipRecord();
 
+        void initializeFromStr(std::string &csvLine);
+
         void setID(int id);
         void setName(std::string className);
+        void setCountry(std::string countryName);
         void setType(std::string shipType);
         void setDisplacement(int displacement);
         void setSizeClass(char sizeClass);
         void setDP(int dp);
         void setSpdRng(int noDmg, int qtrDmg, int hlfDmg, int threeQtrsDmg);
 
+        int getID();
+
+        std::string printSummary();
+
     private:
         int id = 0;
 
         std::string className = "";
+        std::string countryName = "";
         std::string shipType = "";      // Abbreviation, e.g. BB
         int displacement = 0;
         char sizeClass = 'E';

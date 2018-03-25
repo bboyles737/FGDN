@@ -43,8 +43,12 @@
 		<Unit filename="Font.h" />
 		<Unit filename="Shader.cpp" />
 		<Unit filename="Shader.h" />
+		<Unit filename="Unit/DB_Loader.cpp" />
+		<Unit filename="Unit/DB_Loader.h" />
 		<Unit filename="Unit/Ship.cpp" />
 		<Unit filename="Unit/Ship.h" />
+		<Unit filename="Unit/ShipRecord.cpp" />
+		<Unit filename="Unit/ShipRecord.h" />
 		<Unit filename="Unit/Unit.cpp" />
 		<Unit filename="Unit/Unit.h" />
 		<Unit filename="Utils/FGDN_Tools.cpp" />
