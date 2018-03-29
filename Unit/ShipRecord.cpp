@@ -58,6 +58,16 @@ void ShipRecord::setSpdRng(int none, int qtr, int half, int threeQtrs) {
     this->spdRange.push_back(threeQtrs);
 }
 
+int ShipRecord::getShipClassID()            { return this->id;}
+std::string ShipRecord::getShipClassName()  { return this->className; }
+std::string ShipRecord::getShipClassCountry() { return this->countryName; }
+std::string ShipRecord::getShipClassType()  { return this->shipType; }
+int ShipRecord::getShipClassDisplacement()  { return this->displacement; }
+char ShipRecord::getShipClassSize()         { return this->sizeClass; }
+int ShipRecord::getShipClassDP()            { return this->dp; }
+std::vector<int> ShipRecord::getShipClassSpdRng() { return this->spdRange; }
+
+
 int ShipRecord::getID() {return this->id; }
 std::string ShipRecord::printSummary() {
     return ("ID: " + std::to_string(this->id) + ", Class name: " + this->className +

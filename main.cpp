@@ -20,8 +20,7 @@
 
 #include "Unit/Unit.h"
 #include "Unit/Ship.h"
-#include "Unit/ShipRecord.h"
-#include "Unit/DB_Loader.h"
+#include "Game/DBase.h"
 
 // Function prototypes
 void processInput(GLFWwindow* window);
@@ -34,6 +33,8 @@ double deltaTime = 0.0;
 double lastFrame = 0.0;
 
 int lastKeyPressed = 0;
+
+DBase db = DBase();
 
 int main() {
     // OpenGL Setup
@@ -49,15 +50,19 @@ int main() {
 
     // Initialize objects and classes
     stdProgram.initialize();
+    db.loadShipDB("Unit/ShipDB.csv");
 
     Ship y = Ship();
-    std::cout << y.getHeading() << "\n";
+    y.loadRecord(db.getShipRec(1));
+    std::cout << y.getHeading() << " with name " << y.getPitch() << "\n";
     y.draw(stdProgram);
+    std::cout << "NAME: " << y.getClass() << "\n";
 
-    std::map<int, ShipRecord> x = loadShipDB("Unit/ShipDB.csv");
 
-    std::cout << "THIS SHIP IS DA BOMB: " << x[1].printSummary() << "\n";
-    std::cout << "Number of records: " << x.size() << "\n";
+
+
+    std::cout << "THIS SHIP IS DA BOMB: " << db.getShipRec(1).printSummary() << "\n";
+    //std::cout << "Number of records: " << x.size() << "\n";
 
 
     // Main loop

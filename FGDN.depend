@@ -112,3 +112,127 @@
 	<map>
 	<string>
 
+1522073471 source:c:\cbprojects\fgdn\font.cpp
+	"Font.h"
+	"oGL_Tools.h"
+	<iostream>
+	<glm/gtc/matrix_transform.hpp>
+	<stdlib.h>
+
+1522073471 c:\cbprojects\fgdn\font.h
+	"Shader.h"
+	<string>
+	<glm/glm.hpp>
+
+1522073471 c:\cbprojects\fgdn\shader.h
+	<glm/glm.hpp>
+	<glm/gtc/type_ptr.hpp>
+	<glad/glad.h>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+
+1522073471 c:\cbprojects\fgdn\utils\ogl_tools.h
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	"../Shader.h"
+	<cmath>
+
+1522073471 source:c:\cbprojects\fgdn\glad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<glad/glad.h>
+	<windows.h>
+	<dlfcn.h>
+
+1522361556 source:c:\cbprojects\fgdn\main.cpp
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	<stb_image.h>
+	<iostream>
+	<string>
+	<vector>
+	<map>
+	"Shader.h"
+	"oGL_Tools.h"
+	"Font.h"
+	"Unit/Unit.h"
+	"Unit/Ship.h"
+	"Game/DBase.h"
+
+1522073471 c:\cbprojects\fgdn\unit\unit.h
+	<glm/glm.hpp>
+	"../Shader.h"
+
+1522073471 c:\cbprojects\fgdn\unit\ship.h
+	"Unit.h"
+	"ShipRecord.h"
+	<string>
+
+1522360588 c:\cbprojects\fgdn\unit\shiprecord.h
+	<string>
+	<vector>
+
+1522073471 c:\cbprojects\fgdn\unit\db_loader.h
+	"ShipRecord.h"
+	<map>
+	<string>
+
+1522073471 source:c:\cbprojects\fgdn\shader.cpp
+	"Shader.h"
+
+1522073471 source:c:\cbprojects\fgdn\unit\db_loader.cpp
+	"DB_Loader.h"
+	<fstream>
+	<iostream>
+
+1522361512 source:c:\cbprojects\fgdn\unit\ship.cpp
+	"Ship.h"
+	"../Shader.h"
+	<iostream>
+
+1522360779 source:c:\cbprojects\fgdn\unit\shiprecord.cpp
+	"ShipRecord.h"
+	"../Utils/FGDN_Tools.h"
+	<vector>
+	<iostream>
+
+1522073471 c:\cbprojects\fgdn\utils\fgdn_tools.h
+	<string>
+	<vector>
+
+1522073471 source:c:\cbprojects\fgdn\unit\unit.cpp
+	"Unit.h"
+	"../Utils/FGDN_Tools.h"
+	<cmath>
+	<iostream>
+
+1522073471 source:c:\cbprojects\fgdn\utils\fgdn_tools.cpp
+	"FGDN_Tools.h"
+	<sstream>
+
+1522073471 source:c:\cbprojects\fgdn\utils\ogl_tools.cpp
+	"oGL_Tools.h"
+	<stb_image.h>
+	<stdio.h>
+	<iostream>
+
+1522360191 source:c:\cbprojects\fgdn\game\dbase.cpp
+	"DBase.h"
+	<fstream>
+	<iostream>
+	<stdexcept>
+
+1522359177 c:\cbprojects\fgdn\game\dbase.h
+	<map>
+	<string>
+	"../Unit/ShipRecord.h"
+	"../Unit/Ship.h"
+

@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 
+
+
 class ShipRecord
 {
     public:
@@ -19,6 +21,16 @@ class ShipRecord
         void setSizeClass(char sizeClass);
         void setDP(int dp);
         void setSpdRng(int noDmg, int qtrDmg, int hlfDmg, int threeQtrsDmg);
+
+        int getShipClassID();
+        std::string getShipClassName();
+        std::string getShipClassCountry();
+        std::string getShipClassType();
+        int getShipClassDisplacement();
+        char getShipClassSize();
+        int getShipClassDP();
+        std::vector<int> getShipClassSpdRng();
+
 
         int getID();
 

@@ -15,6 +15,7 @@
 					<Add directory="include" />
 					<Add directory="Unit" />
 					<Add directory="Utils" />
+					<Add directory="Game" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 					<Add directory="include" />
 					<Add directory="Unit" />
 					<Add directory="Utils" />
+					<Add directory="Game" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -41,10 +43,10 @@
 		</Linker>
 		<Unit filename="Font.cpp" />
 		<Unit filename="Font.h" />
+		<Unit filename="Game/DBase.cpp" />
+		<Unit filename="Game/DBase.h" />
 		<Unit filename="Shader.cpp" />
 		<Unit filename="Shader.h" />
-		<Unit filename="Unit/DB_Loader.cpp" />
-		<Unit filename="Unit/DB_Loader.h" />
 		<Unit filename="Unit/Ship.cpp" />
 		<Unit filename="Unit/Ship.h" />
 		<Unit filename="Unit/ShipRecord.cpp" />

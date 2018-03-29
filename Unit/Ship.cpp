@@ -13,6 +13,11 @@ void Ship::initialize() {
 
 }
 
+void Ship::loadRecord(ShipRecord r) {
+    this->setClass(r.getShipClassName());
+    std::cout << "Loaded ship class " << this->className << "\n";
+}
+
 void Ship::draw(Shader s) {
     std::cout << "Draw!\n";
 }
