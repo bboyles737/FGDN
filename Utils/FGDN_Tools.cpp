@@ -2,6 +2,7 @@
 
 #include <sstream>
 
+
 // Courtesy https://www.fluentcpp.com/2017/04/21/how-to-split-a-string-in-c/
 std::vector<std::string> split(const std::string& s, char delimiter) {
     std::vector<std::string> tokens;
@@ -11,6 +12,13 @@ std::vector<std::string> split(const std::string& s, char delimiter) {
         tokens.push_back(token);
     }
     return tokens;
+}
+
+int capAmount(int amt, int minVal, int maxVal) {
+    if (amt < minVal) return minVal;
+    else if (amt > maxVal) return maxVal;
+    else return amt;
+
 }
 
 double yds_to_m(double yds)   { return yds * 0.9144;  }

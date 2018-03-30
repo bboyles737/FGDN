@@ -20,7 +20,9 @@
 
 #include "Unit/Unit.h"
 #include "Unit/Ship.h"
+#include "Game/Game.h"
 #include "Game/DBase.h"
+#include "Game/Clock.h"
 
 // Function prototypes
 void processInput(GLFWwindow* window);
@@ -34,7 +36,8 @@ double lastFrame = 0.0;
 
 int lastKeyPressed = 0;
 
-DBase db = DBase();
+Game gameObj = Game();
+Clock c = Clock();
 
 int main() {
     // OpenGL Setup
@@ -50,10 +53,10 @@ int main() {
 
     // Initialize objects and classes
     stdProgram.initialize();
-    db.loadShipDB("Unit/ShipDB.csv");
+    gameObj.initialize();
 
     Ship y = Ship();
-    y.loadRecord(db.getShipRec(1));
+    y.loadRecord(gameObj.getDB().getShipRec(1));
     std::cout << y.getHeading() << " with name " << y.getPitch() << "\n";
     y.draw(stdProgram);
     std::cout << "NAME: " << y.getClass() << "\n";
@@ -61,14 +64,18 @@ int main() {
 
 
 
-    std::cout << "THIS SHIP IS DA BOMB: " << db.getShipRec(1).printSummary() << "\n";
+    std::cout << "THIS SHIP IS DA BOMB: " << gameObj.getDB().getShipRec(1).printSummary() << "\n";
     //std::cout << "Number of records: " << x.size() << "\n";
 
+    c.setClock(1984, 7, 21, 8, 30, 0);
 
     // Main loop
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        std::cout << c.printDateTime() << "\n";
+        c.incrementSec(60*60*24);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

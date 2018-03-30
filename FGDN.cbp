@@ -43,8 +43,12 @@
 		</Linker>
 		<Unit filename="Font.cpp" />
 		<Unit filename="Font.h" />
+		<Unit filename="Game/Clock.cpp" />
+		<Unit filename="Game/Clock.h" />
 		<Unit filename="Game/DBase.cpp" />
 		<Unit filename="Game/DBase.h" />
+		<Unit filename="Game/Game.cpp" />
+		<Unit filename="Game/Game.h" />
 		<Unit filename="Shader.cpp" />
 		<Unit filename="Shader.h" />
 		<Unit filename="Unit/Ship.cpp" />

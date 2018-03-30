@@ -149,7 +149,7 @@
 	<windows.h>
 	<dlfcn.h>
 
-1522361556 source:c:\cbprojects\fgdn\main.cpp
+1522417366 source:c:\cbprojects\fgdn\main.cpp
 	<glm/glm.hpp>
 	<glm/gtc/matrix_transform.hpp>
 	<glm/gtc/type_ptr.hpp>
@@ -165,6 +165,7 @@
 	"Font.h"
 	"Unit/Unit.h"
 	"Unit/Ship.h"
+	"Game/Game.h"
 	"Game/DBase.h"
 
 1522073471 c:\cbprojects\fgdn\unit\unit.h
@@ -193,7 +194,7 @@
 	<fstream>
 	<iostream>
 
-1522361512 source:c:\cbprojects\fgdn\unit\ship.cpp
+1522361575 source:c:\cbprojects\fgdn\unit\ship.cpp
 	"Ship.h"
 	"../Shader.h"
 	<iostream>
@@ -204,7 +205,7 @@
 	<vector>
 	<iostream>
 
-1522073471 c:\cbprojects\fgdn\utils\fgdn_tools.h
+1522417718 c:\cbprojects\fgdn\utils\fgdn_tools.h
 	<string>
 	<vector>
 
@@ -214,7 +215,7 @@
 	<cmath>
 	<iostream>
 
-1522073471 source:c:\cbprojects\fgdn\utils\fgdn_tools.cpp
+1522418080 source:c:\cbprojects\fgdn\utils\fgdn_tools.cpp
 	"FGDN_Tools.h"
 	<sstream>
 
@@ -235,4 +236,19 @@
 	<string>
 	"../Unit/ShipRecord.h"
 	"../Unit/Ship.h"
+
+1522417274 source:c:\cbprojects\fgdn\game\game.cpp
+	"Game.h"
+
+1522417265 c:\cbprojects\fgdn\game\game.h
+	"DBase.h"
+
+1522419077 source:c:\cbprojects\fgdn\game\clock.cpp
+	"Clock.h"
+	<iostream>
+	<stdexcept>
+	"../Utils/FGDN_Tools.h"
+
+1522419060 c:\cbprojects\fgdn\game\clock.h
+	<string>
 
